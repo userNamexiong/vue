@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="app">
+			<input type="checkbox" v-model="isSelect" />
+			<!-- 指令 -->
+			<div v-if="isSelect" class="box" style="width: 100px; height: 100px; background: red; margin: 10px;">
+				box1
+			</div>
+			<div v-show="isSelect" class="box" style="width: 100px; height: 100px; background: red;">
+				box2
+			</div>
+			
+			<ul>
+				<!-- 遍历 -->
+				<!--<li v-for="(item, index) in arr">-->
+				<li v-for="(value, i) in arr">
+					{{i}}----{{value}}
+				</li>
+			</ul>
+			
+			<ol>
+				<!--<li v-for="(item, key) in obj">-->
+				<li v-for="(val, k) in obj">
+					{{k}}--------{{val}}
+				</li>
+			</ol>
+			
+		</div>
+		
+		
+		<script src="vue.js"></script>
+		
+		<script>
+			
+			//创建vue实例
+			var vw = new Vue({
+				el: '#app',
+				data: {
+					isSelect: true,
+					arr: ['a', 'b', 'c', 'd', 'e', 'f'],
+					obj: {
+						name: '张三',
+						age: 40,
+						height: 180
+					}
+				}
+				
+			});
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

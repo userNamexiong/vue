@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="app">
+			<!-- 由vue实例实现点击事件 -->
+			<button v-on:click="btnAction()">按钮</button>
+			
+		</div>
+			<button v-on:click="btnAction()">按钮</button>
+		
+		
+		<script src="vue.js"></script>
+		
+		<script>
+			
+			//创建vue实例
+			var vw = new Vue({
+				el: '#app',
+				//vue实例的所有事件
+				methods: {
+					btnAction: function(){
+						alert('欢迎光临');
+					}
+					
+				}
+				
+			});
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="app">
+			<h1>{{title}}</h1>
+			<h2>{{message}}</h2>
+			<!-- 双向绑定 -->
+			<!-- dom结构的数据向js方向传播
+			-->
+			<input type="text" v-model="message"/>
+			
+			
+		</div>
+		
+		
+		<script src="vue.js"></script>
+		
+		<script>
+			var title = '千锋教育';
+//			document.querySelector('h1').innerHTML = title;
+			
+			//创建vue实例
+			var vw = new Vue({
+				//vue实例作用的（所管理的）dom结构
+				el: '#app',//document.querySelector()
+				//vue实例所需要使用的属性
+				data: {
+					//将js中的数据绑定到了dom结构中
+					title: title,
+					message: 'hello vue'
+				}
+			});
+			
+			console.log(vw);
+			console.log(vw.title);
+			
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>
